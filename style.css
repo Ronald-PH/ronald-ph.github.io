@@ -4,6 +4,7 @@
 	padding: 0;
 	margin: 0;
 	font-family: courier;
+	scroll-behaviour: smooth;
 }
 .container2 {
 	height: 100vh;
