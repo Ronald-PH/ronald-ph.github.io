@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#060a0c">
+    <title>504 — Gateway Timeout | Ronald Soberano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="/rus-errors/style.css">
+</head>
+<body>
+    <main class="error-card">
+        <a class="error-brand" href="/" aria-label="Ronald Soberano — home">
+            <img src="/images/logo.png" alt="">
+            <span>RONALD SOBERANO</span>
+        </a>
+        <p class="error-code" aria-label="Error 504">504</p>
+        <h1 class="error-title">Gateway timed out</h1>
+        <p class="error-message">A server took too long to respond. Please try again in a moment.</p>
+        <nav class="error-actions" aria-label="Error page actions">
+            <a class="error-button error-button--primary" href="/">Go to homepage</a>
+            <button class="error-button" id="go-back" type="button">Go back</button>
+            <button class="error-button" type="button" onclick="window.location.reload()">Try again</button>
+        </nav>
+        <p class="error-footnote">HTTP error 504</p>
+    </main>
+    <script src="/rus-errors/errors.js"></script>
+</body>
+</html>

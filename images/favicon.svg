@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RS">
+    <rect width="64" height="64" rx="14" fill="#060a0c"/>
+    <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#4ade80" stroke-opacity=".35"/>
+    <text x="32" y="44" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="33" font-weight="700" fill="#4ade80">RS</text>
+</svg>

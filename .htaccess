@@ -1,0 +1,48 @@
+# Ronald Soberano — static portfolio
+# Apache configuration for shared hosting (rf.gd / InfinityFree friendly)
+
+# Default document
+DirectoryIndex index.html
+
+# --- Custom error pages ---------------------------------------------------
+ErrorDocument 400 /errors/400.html
+ErrorDocument 401 /errors/401.html
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+ErrorDocument 405 /errors/405.html
+ErrorDocument 408 /errors/408.html
+ErrorDocument 429 /errors/429.html
+ErrorDocument 500 /errors/500.html
+ErrorDocument 501 /errors/501.html
+ErrorDocument 502 /errors/502.html
+ErrorDocument 503 /errors/503.html
+ErrorDocument 504 /errors/504.html
+
+# --- Compression -----------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/xml
+    AddOutputFilterByType DEFLATE application/javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# --- Browser caching -------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html                 "access plus 1 hour"
+    ExpiresByType text/css                  "access plus 7 days"
+    ExpiresByType application/javascript    "access plus 7 days"
+    ExpiresByType image/jpeg                "access plus 1 year"
+    ExpiresByType image/png                 "access plus 1 year"
+    ExpiresByType image/svg+xml             "access plus 1 year"
+    ExpiresByType image/x-icon              "access plus 1 year"
+    ExpiresByType application/pdf           "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|svg|ico|pdf)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+</IfModule>
